@@ -1,0 +1,24 @@
+{
+  "name": "@jaxkodex/simple-genetic-algorithm-ts",
+  "version": "1.0.0",
+  "description": "A typescript version of the simple genetic algorithm from book Genetic algorithms in search, optimization, and machine learning",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@stdlib/stdlib": "^0.3.2",
+    "@stdlib/types": "^0.4.3"
+  }
+}
