@@ -2,7 +2,7 @@ import flip from "./flip";
 import generate from "./generate";
 import { Population } from "./types";
 
-function initialize(oldPopulation: Population, newPopulation: Population, chromosomeLength: number, populationSize: number) {
+export function initialize(oldPopulation: Population, newPopulation: Population, chromosomeLength: number, populationSize: number) {
   for (let i = 0; i < populationSize; i++) {
     oldPopulation[i] = {
       chromosome: new Array(chromosomeLength),
@@ -56,4 +56,19 @@ export default function compute(chromosomeLength: number, populationSize: number
   } while (generations < maxGenerations)
 
   return best
+}
+
+export interface StepRequest {
+  chromosomeLength: number
+  oldPopulation: Population
+  newPopulation: Population
+  populationSize: number
+  fitnessSum: number
+  crossoverProbability: number
+  mutationProbability: number
+}
+
+export function step(props: StepRequest) {
+  const { chromosomeLength, oldPopulation, newPopulation, populationSize, fitnessSum, crossoverProbability, mutationProbability } = props
+  generate(populationSize, fitnessSum, oldPopulation, newPopulation, chromosomeLength, crossoverProbability, mutationProbability)
 }
