@@ -1,6 +1,6 @@
 {
   "name": "@jaxkodex/simple-genetic-algorithm-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A typescript version of the simple genetic algorithm from book Genetic algorithms in search, optimization, and machine learning",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
